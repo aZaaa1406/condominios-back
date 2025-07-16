@@ -13,7 +13,7 @@ export const conection ={
     
 }
 
-
+export const GCS = process.env.GCP_SERVICE_ACCOUNT
 export const SALT = parseInt(process.env.SALT);
 
 export const SECRET_KEY_JWT = process.env.SECRET_KEY_JWT;
