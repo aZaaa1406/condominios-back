@@ -8,10 +8,10 @@ export const LoginUser = async (req, res)=>{
         console.log(login);
         return res
             .cookie("access_token", login.token, {
-                httpOnly: process.env.NODE_ENV === 'production' ? true : false,
-                secure: process.env.NODE_ENV === 'production' ? true : false,
-                sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
-                domain: process.env.NODE_ENV === 'production' ? process.env.DOMAIN : undefined,
+                httpOnly: false,
+                secure: false,
+                sameSite:  'lax',
+                domain:  undefined,
                 path: "/",
                 maxAge: 1000 * 60 * 60 // 1 hora
             })

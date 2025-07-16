@@ -2,7 +2,7 @@ import { Storage } from '@google-cloud/storage';
 import { GCS } from '../config/config.js';
 
 // Ruta absoluta al archivo JSON
-const serviceAccount = JSON.parse(GCP || '{}');
+const serviceAccount = JSON.parse(GCS || '{}');
 
 const storage = new Storage({
   credentials: GCS,
