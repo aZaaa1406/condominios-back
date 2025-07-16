@@ -1,11 +1,11 @@
 import { Storage } from '@google-cloud/storage';
-import { GCP } from '../config/config.js';
+import { GCS } from '../config/config.js';
 
 // Ruta absoluta al archivo JSON
 const serviceAccount = JSON.parse(GCP || '{}');
 
 const storage = new Storage({
-  credentials: GCP,
+  credentials: GCS,
   projectId: 'eventspace-442007' // lo encuentras en el archivo JSON
 });
 
